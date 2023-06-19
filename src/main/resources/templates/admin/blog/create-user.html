@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+  <title>Thêm người dùng </title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" th:href="@{/admin-lte/plugins/fontawesome-free/css/all.min.css}"/>
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/admin-lte/dist/css/adminlte.min.css}"/>
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" th:href="@{/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-md-6">
+
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Create user</h3>
+          </div>
+
+
+          <form id="quickForm" novalidate="novalidate">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="exampleInputEmail1">User name</label>
+                <input type="text" name="username" class="form-control" id="exampleInputName" placeholder="Enter full-name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Re-password</label>
+                <input type="password" name="Re-password" class="form-control" id="exampleInputRePassword1" placeholder="Re-password">
+              </div>
+              <div class="form-group mb-0">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+                  <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- jQuery -->
+<script th:src="@{/admin-lte/plugins/jquery/jquery.min.js}"></script>
+
+<!-- Bootstrap 4 -->
+<script th:src="@{/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<!-- overlayScrollbars -->
+<script th:src="@{/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js}"></script>
+
+<!-- axios -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- AdminLTE App -->
+<script th:src="@{/admin-lte/dist/js/adminlte.js}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
