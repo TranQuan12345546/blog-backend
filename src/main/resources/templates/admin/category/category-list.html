@@ -121,24 +121,29 @@
         const deleteButtons = document.querySelectorAll('.delete');
         deleteButtons.forEach(button => {
             button.addEventListener('click', async function(event) {
-                const row = event.target.closest('tr');
-                const categoryId = row.querySelector('td:first-child').textContent;
+                if(window.confirm("Bạn có muốn xoá không?")) {
+                    const row = event.target.closest('tr');
+                    const categoryId = row.querySelector('td:first-child').textContent;
 
-                // Gửi yêu cầu xóa danh mục đến máy chủ
-                const url = `/api/v1/admin/categories/${categoryId}`;
+                    // Gửi yêu cầu xóa danh mục đến máy chủ
+                    const url = `/api/v1/admin/categories/${categoryId}`;
 
-                const response = await fetch(url, {
-                    method: "DELETE",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            toastr.success("Xoá category thành công");
-                        }
+                    const response = await fetch(url, {
+                        method: "DELETE",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
                     })
-                row.remove();
+                        .then(response => {
+                            if (response.ok) {
+                                toastr.success("Xoá category thành công");
+                                row.remove();
+                            } else {
+                                toastr.error("Không thể xoá")
+                            }
+                        })
+
+                }
             });
         });
 
